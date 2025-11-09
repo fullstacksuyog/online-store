@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suyog Store | Minimal E-commerce</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="logo">SD</span>
+      <h1>Suyog Store</h1>
+    </div>
+    <nav class="nav">
+      <button id="cartBtn" class="btn btn-accent">Cart <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Clean, minimal and fast — a demo storefront</h2>
+      <p>Modern UI, smooth cart, and a mock checkout. Perfect for showcasing your full-stack chops.</p>
+    </section>
+
+    <section id="products" class="grid">
+      <!-- Products injected by JS -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p>© 2025 Suyog Dev • Full Stack Developer</p>
+      <p><a href="mailto:suyogpokharel58@gmail.com">Contact</a> • <a href="#">GitHub</a> • <a href="#">Portfolio</a></p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" class="icon-btn" aria-label="Close">✕</button>
+    </div>
+    <div id="cartItems" class="drawer-body">
+      <!-- Cart items -->
+    </div>
+    <div class="drawer-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="cartTotal">NPR 0</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary">Proceed to checkout</button>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Checkout modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Checkout</h3>
+        <button id="closeCheckout" class="icon-btn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkoutForm" class="form">
+          <label>
+            <span>Full name</span>
+            <input type="text" required/>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" required/>
+          </label>
+          <label>
+            <span>Address</span>
+            <input type="text" required/>
+          </label>
+          <label>
+            <span>Payment method</span>
+            <select required>
+              <option value="esewa">eSewa (mock)</option>
+              <option value="khalti">Khalti (mock)</option>
+              <option value="cod">Cash on delivery (mock)</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primary">Place order (demo)</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
